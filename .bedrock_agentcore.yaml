@@ -1,0 +1,62 @@
+default_agent: agent_deployment_tutorial_agent
+agents:
+  agent_deployment_tutorial_agent:
+    name: agent_deployment_tutorial_agent
+    language: python
+    node_version: '20'
+    entrypoint: C:/Users/AlexandrYasevich/agentcore-tutorial/agent_deployment/tutorial_agent.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: C:\Users\AlexandrYasevich\agentcore-tutorial\agent_deployment
+    aws:
+      execution_role: arn:aws:iam::857056366437:role/AmazonBedrockAgentCoreSDKRuntime-us-east-1-854f686f2e
+      execution_role_auto_create: false
+      account: '857056366437'
+      region: us-east-1
+      ecr_repository: 857056366437.dkr.ecr.us-east-1.amazonaws.com/bedrock-agentcore-agent_deployment_tutorial_agent
+      ecr_auto_create: false
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: HTTP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: agent_deployment_tutorial_agent-5sB4749UJP
+      agent_arn: arn:aws:bedrock-agentcore:us-east-1:857056366437:runtime/agent_deployment_tutorial_agent-5sB4749UJP
+      agent_session_id: 12345-12345-12345-12345-12345-12345-A
+    codebuild:
+      project_name: bedrock-agentcore-agent_deployment_tutorial_agent-builder
+      execution_role: arn:aws:iam::857056366437:role/AmazonBedrockAgentCoreSDKCodeBuild-us-east-1-854f686f2e
+      source_bucket: bedrock-agentcore-codebuild-sources-857056366437-us-east-1
+    memory:
+      mode: STM_AND_LTM
+      memory_id: agent_deployment_tutorial_agent_mem-yAbSKZCAun
+      memory_arn: arn:aws:bedrock-agentcore:us-east-1:857056366437:memory/agent_deployment_tutorial_agent_mem-yAbSKZCAun
+      memory_name: agent_deployment_tutorial_agent_mem
+      event_expiry_days: 30
+      first_invoke_memory_check_done: true
+      was_created_by_toolkit: false
+    identity:
+      credential_providers: []
+      workload: null
+    aws_jwt:
+      enabled: false
+      audiences: []
+      signing_algorithm: ES384
+      issuer_url: null
+      duration_seconds: 300
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
