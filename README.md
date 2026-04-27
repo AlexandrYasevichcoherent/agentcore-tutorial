@@ -14,12 +14,6 @@ This project demonstrates a production-style AI agent built using Amazon Bedrock
 
 ---
 
-## 🏗 Architecture
-
-Client → AgentCore Runtime → Agent → Bedrock Model  
-                               ↓  
-                             Memory  
-
 # 1. Create project and install dependencies
 mkdir agentcore-tutorial && cd agentcore-tutorial
 uv init --no-workspace && uv add bedrock-agentcore-starter-toolkit
